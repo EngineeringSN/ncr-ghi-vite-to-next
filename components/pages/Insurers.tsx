@@ -1,106 +1,114 @@
-
 import React from "react";
-import MainLayout from "@/layouts/MainLayout";
 import InsuranceCard from "@/components/InsuranceCard";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import starLogo from "@/public/lovable-uploads/starlogo.png";
+import hdfcErgo from "@/public/lovable-uploads/hdfergo.png";
+import iciciLombard from "@/public/lovable-uploads/icicilogo.png";
+import bajajAllianz from "@/public/lovable-uploads/bajajlogo.png";
+import tataLogo from "@/public/lovable-uploads/TataAIG.png";
+import relianceLogo from "@/public/lovable-uploads/reliance_GI.png";
+import nivaLogo from "@/public/lovable-uploads/Niva-Bupa-Logo.png";
+import newIndiaLogo from "@/public/lovable-uploads/niaBlue2.png";
+import orientalLogo from "@/public/lovable-uploads/oriental.png";
+import aditiyaLogo from "@/public/lovable-uploads/abhi-logo.png";
+import manipalLogo from "@/public/lovable-uploads/cigna.png";
+import sbiLogo from "@/public/lovable-uploads/sbig-logo.png";
 
 const Insurers = () => {
-  const breadcrumbItems = [
-    { label: "Insurance Partners" }
-  ];
+  const breadcrumbItems = [{ label: "Insurance Partners" }];
 
   const insuranceProviders = [
     {
       name: "Star Health Insurance",
-      logo: "/public/lovable-uploads/starlogo.png",
+      logo: starLogo,
       description:
         "Specialized health insurance provider with excellent claim settlement ratio and extensive hospital network.",
-      path: "/insurers/star-health"
+      path: "/insurers/star-health",
     },
     {
       name: "HDFC ERGO",
-      logo: "/public/lovable-uploads/hdfergo.png",
+      logo: hdfcErgo,
       description:
         "Innovative health insurance solutions with digital-first approach for businesses of all sizes.",
-      path: "/insurers/hdfc-ergo"
+      path: "/insurers/hdfc-ergo",
     },
     {
       name: "ICICI Lombard",
-      logo: "/public/lovable-uploads/icicilogo.png",
+      logo: iciciLombard,
       description:
         "One of India's leading private sector general insurance companies with superior customer service.",
-      path: "/insurers/icici-lombard"
+      path: "/insurers/icici-lombard",
     },
     {
       name: "Bajaj Allianz",
-      logo: "/public/lovable-uploads/bajajlogo.png",
+      logo: bajajAllianz,
       description:
         "Comprehensive health coverage with quick claim settlement and wide hospital network.",
-      path: "/insurers/bajaj-allianz"
+      path: "/insurers/bajaj-allianz",
     },
     {
       name: "Tata AIG",
-      logo: "/public/lovable-uploads/TataAIG.png",
+      logo: tataLogo,
       description:
         "Trusted insurance provider with customizable health plans and excellent customer support.",
-      path: "/insurers/tata-aig"
+      path: "/insurers/tata-aig",
     },
     {
       name: "Reliance General Insurance",
-      logo: "/public/lovable-uploads/reliance_GI.png",
+      logo: relianceLogo,
       description:
         "Strong network coverage with innovative health insurance solutions for corporate clients.",
-      path: "/insurers/reliance-general"
+      path: "/insurers/reliance-general",
     },
     {
       name: "Niva Bupa",
-      logo: "/public/lovable-uploads/Niva-Bupa-Logo.png",
+      logo: nivaLogo,
       description:
         "Dedicated health insurance provider with comprehensive coverage options and wellness programs.",
-      path: "/insurers/niva-bupa"
+      path: "/insurers/niva-bupa",
     },
     {
       name: "New India Assurance",
-      logo: "/public/lovable-uploads/niaBlue2.png",
+      logo: newIndiaLogo,
       description:
         "India's premier public sector insurance company with widespread presence and reliable service.",
-      path: "/insurers/new-india-assurance"
+      path: "/insurers/new-india-assurance",
     },
     {
       name: "Oriental Insurance",
-      logo: "/public/lovable-uploads/oriental.png",
+      logo: orientalLogo,
       description:
         "Public sector insurer offering comprehensive health insurance with extensive coverage.",
-      path: "/insurers/oriental-insurance"
+      path: "/insurers/oriental-insurance",
     },
     {
       name: "Aditya Birla Health Insurance",
-      logo: "/public/lovable-uploads/abhi-logo.png",
+      logo: aditiyaLogo,
       description:
         "Health-first insurance approach with proactive care and incentivized wellness programs.",
-      path: "/insurers/aditya-birla"
+      path: "/insurers/aditya-birla",
     },
     {
       name: "Manipal Cigna",
-      logo: "/public/lovable-uploads/cigna.png",
+      logo: manipalLogo,
       description:
         "Global expertise with local understanding, offering comprehensive health insurance solutions.",
-      path: "/insurers/manipal-cigna"
+      path: "/insurers/manipal-cigna",
     },
     {
       name: "SBI General Insurance",
-      logo: "/public/lovable-uploads/sbig-logo.png",
+      logo: sbiLogo,
       description:
         "Reliable health insurance provider with simple and hassle-free claim settlement process.",
-      path: "/insurers/sbi-general"
+      path: "/insurers/sbi-general",
     },
   ];
 
   return (
-    <MainLayout>
+    <>
       <BreadcrumbNav items={breadcrumbItems} />
-      
+
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -121,7 +129,11 @@ const Insurers = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {insuranceProviders.map((insurer, index) => (
-              <Link key={index} to={insurer.path} className="block hover:transform hover:scale-105 transition-transform duration-300">
+              <Link
+                key={index}
+                href={insurer.path}
+                className="block hover:transform hover:scale-105 transition-transform duration-300"
+              >
                 <InsuranceCard
                   name={insurer.name}
                   logo={insurer.logo}
@@ -205,7 +217,7 @@ const Insurers = () => {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

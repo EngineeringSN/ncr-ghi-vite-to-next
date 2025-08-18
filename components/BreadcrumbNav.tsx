@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import React from "react";
+import Link from "next/link";
+import { ChevronRight, Home } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -9,7 +8,7 @@ import {
   BreadcrumbLink,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+} from "@/components/ui/breadcrumb";
 
 interface BreadcrumbItem {
   label: string;
@@ -28,7 +27,10 @@ const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({ items }) => {
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
-                <Link to="/" className="flex items-center text-securenow-blue hover:text-securenow-orange">
+                <Link
+                  href="/"
+                  className="flex items-center text-securenow-blue hover:text-securenow-orange"
+                >
                   <Home className="h-4 w-4 mr-1" />
                   Home
                 </Link>
@@ -42,7 +44,10 @@ const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({ items }) => {
                 <BreadcrumbItem>
                   {item.href && index < items.length - 1 ? (
                     <BreadcrumbLink asChild>
-                      <Link to={item.href} className="text-securenow-blue hover:text-securenow-orange">
+                      <Link
+                        href={item.href}
+                        className="text-securenow-blue hover:text-securenow-orange"
+                      >
                         {item.label}
                       </Link>
                     </BreadcrumbLink>

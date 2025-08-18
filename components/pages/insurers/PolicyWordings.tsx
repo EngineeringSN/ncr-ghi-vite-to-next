@@ -1,23 +1,23 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import MainLayout from "@/layouts/MainLayout";
 import { Search, FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-
+import Image from "next/image";
 //pdfs
-import startPdf from "../../../public/lovable-uploads/insurerPdfs/Star-Group-Health-Insurance.pdf";
-import hdfcPdf from "../../../public/lovable-uploads/insurerPdfs/HDFC-Group-Health-Insurance_Policy Wording.pdf";
-import iciciPdf from "../../../public/lovable-uploads/insurerPdfs/icicipolicy-wordings.pdf";
-import bajajPdf from "../../../public/lovable-uploads/insurerPdfs/bajaj_policy_wording.pdf";
-import adityaPdf from "../../../public/lovable-uploads/insurerPdfs/aditya-birla-policy-wording.pdf";
-import nivaBupa from "../../../public/lovable-uploads/insurerPdfs/niva_bupa_wordings.pdf";
-import newIndiaPdf from "../../../public/lovable-uploads/insurerPdfs/New India Mediclaim Policy.pdf";
-import reliancePdf from "../../../public/lovable-uploads/insurerPdfs/reliance_Policy_Wording.pdf";
-import sbiPdf from "../../../public/lovable-uploads/insurerPdfs/sbi_wordings.pdf";
-import tatapdf from "../../../public/lovable-uploads/insurerPdfs/Tata_AIG_Medi_Care_82932b277a.pdf";
-import orientalPdf from "../../../public/lovable-uploads/insurerPdfs/OICHLGP449V022021_2020-2021.pdf";
+// import startPdf from "../../../public/lovable-uploads/insurerPdfs/Star-Group-Health-Insurance.pdf";
+// import hdfcPdf from "../../../public/lovable-uploads/insurerPdfs/HDFC-Group-Health-Insurance_Policy Wording.pdf";
+// import iciciPdf from "../../../public/lovable-uploads/insurerPdfs/icicipolicy-wordings.pdf";
+// import bajajPdf from "../../../public/lovable-uploads/insurerPdfs/bajaj_policy_wording.pdf";
+// import adityaPdf from "../../../public/lovable-uploads/insurerPdfs/aditya-birla-policy-wording.pdf";
+// import nivaBupa from "../../../public/lovable-uploads/insurerPdfs/niva_bupa_wordings.pdf";
+// import newIndiaPdf from "../../../public/lovable-uploads/insurerPdfs/New India Mediclaim Policy.pdf";
+// import reliancePdf from "../../../public/lovable-uploads/insurerPdfs/reliance_Policy_Wording.pdf";
+// import sbiPdf from "../../../public/lovable-uploads/insurerPdfs/sbi_wordings.pdf";
+// import tatapdf from "../../../public/lovable-uploads/insurerPdfs/Tata_AIG_Medi_Care_82932b277a.pdf";
+// import orientalPdf from "../../../public/lovable-uploads/insurerPdfs/OICHLGP449V022021_2020-2021.pdf";
 
 //logos
 import bajajLogo from "../../../public/lovable-uploads/bajajlogo.png";
@@ -35,35 +35,44 @@ import pdfFavicon from "../../../public/lovable-uploads/58de68a1-b69f-4c6c-a156-
 
 const PolicyWordings = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  
+
   // Create a blob URL for each PDF to retain the domain origin
-  const [blobUrls, setBlobUrls] = useState<{[key: string]: string}>({});
-  
+  const [blobUrls, setBlobUrls] = useState<{ [key: string]: string }>({});
+
   useEffect(() => {
     // Create blob URLs for all PDFs to keep them on the same domain
     const fetchPdfsAndCreateBlobs = async () => {
-      const pdfs: {[key: string]: string} = {
-        'Star Health Insurance': startPdf,
-        'HDFC Ergo': hdfcPdf,
-        'ICICI Lombard': iciciPdf,
-        'Bajaj Allianz': bajajPdf,
-        'Aditya Birla': adityaPdf,
-        'Niva Bupa': nivaBupa,
-        'New India Assurance': newIndiaPdf,
-        'Reliance General': reliancePdf,
-        'SBI General': sbiPdf,
-        'Tata AIG': tatapdf,
-        'Oriental Insurance': orientalPdf
+      const pdfs: { [key: string]: string } = {
+        "Star Health Insurance":
+          "/lovable-uploads/insurerPdfs/Star-Group-Health-Insurance.pdf",
+        "HDFC Ergo":
+          "/lovable-uploads/insurerPdfs/HDFC-Group-Health-Insurance_Policy Wording.pdf",
+        "ICICI Lombard":
+          "/lovable-uploads/insurerPdfs/icicipolicy-wordings.pdf",
+        "Bajaj Allianz":
+          "/lovable-uploads/insurerPdfs/bajaj_policy_wording.pdf",
+        "Aditya Birla":
+          "/lovable-uploads/insurerPdfs/aditya-birla-policy-wording.pdf",
+        "Niva Bupa": "/lovable-uploads/insurerPdfs/niva_bupa_wordings.pdf",
+        "New India Assurance":
+          "/lovable-uploads/insurerPdfs/New India Mediclaim Policy.pdf",
+        "Reliance General":
+          "/lovable-uploads/insurerPdfs/reliance_Policy_Wording.pdf",
+        "SBI General": "/lovable-uploads/insurerPdfs/sbi_wordings.pdf",
+        "Tata AIG":
+          "/lovable-uploads/insurerPdfs/Tata_AIG_Medi_Care_82932b277a.pdf",
+        "Oriental Insurance":
+          "/lovable-uploads/insurerPdfs/OICHLGP449V022021_2020-2021.pdf",
       };
-      
-      const newBlobUrls: {[key: string]: string} = {};
-      
+
+      const newBlobUrls: { [key: string]: string } = {};
+
       for (const [insurer, pdfPath] of Object.entries(pdfs)) {
         try {
           // Fetch the PDF document
           const response = await fetch(pdfPath);
           const blob = await response.blob();
-          
+
           // Create a blob URL that maintains the same domain origin
           const blobUrl = URL.createObjectURL(blob);
           newBlobUrls[insurer] = blobUrl;
@@ -73,97 +82,101 @@ const PolicyWordings = () => {
           newBlobUrls[insurer] = pdfPath;
         }
       }
-      
+
       setBlobUrls(newBlobUrls);
     };
-    
+
     fetchPdfsAndCreateBlobs();
-    
+
     // Cleanup function to revoke blob URLs when component unmounts
     return () => {
-      Object.values(blobUrls).forEach(url => {
-        if (url.startsWith('blob:')) {
+      Object.values(blobUrls).forEach((url) => {
+        if (url.startsWith("blob:")) {
           URL.revokeObjectURL(url);
         }
       });
     };
   }, []);
-  
+
   const insurerPolicies = [
     {
       insurer: "Star Health Insurance",
-      document: startPdf,
+      document: "/lovable-uploads/insurerPdfs/Star-Group-Health-Insurance.pdf",
       logo: starLogo,
     },
     {
       insurer: "HDFC Ergo",
-      document: hdfcPdf,
+      document:
+        "/lovable-uploads/insurerPdfs/HDFC-Group-Health-Insurance_Policy Wording.pdf",
       logo: hdfcErgo,
     },
     {
       insurer: "ICICI Lombard",
-      document: iciciPdf,
+      document: "/lovable-uploads/insurerPdfs/icicipolicy-wordings.pdf",
       logo: iciciLogo,
     },
     {
       insurer: "Bajaj Allianz",
-      document: bajajPdf,
+      document: "/lovable-uploads/insurerPdfs/bajaj_policy_wording.pdf",
       logo: bajajLogo,
     },
     {
       insurer: "Aditya Birla",
-      document: adityaPdf,
+      document: "/lovable-uploads/insurerPdfs/aditya-birla-policy-wording.pdf",
       logo: aditya,
     },
     {
       insurer: "Niva Bupa",
-      document: nivaBupa,
+      document: "/lovable-uploads/insurerPdfs/niva_bupa_wordings.pdf",
       logo: nivaLogo,
     },
     {
       insurer: "New India Assurance",
-      document: newIndiaPdf,
+      document: "/lovable-uploads/insurerPdfs/New India Mediclaim Policy.pdf",
       logo: newIndia,
     },
     {
       insurer: "Reliance General",
-      document: reliancePdf,
+      document: "/lovable-uploads/insurerPdfs/reliance_Policy_Wording.pdf",
       logo: relianceLogo,
     },
     {
       insurer: "SBI General",
-      document: sbiPdf,
+      document: "/lovable-uploads/insurerPdfs/sbi_wordings.pdf",
       logo: sbiLogo,
     },
     {
       insurer: "Tata AIG",
-      document: tatapdf,
+      document:
+        "/lovable-uploads/insurerPdfs/Tata_AIG_Medi_Care_82932b277a.pdf",
       logo: tataLogo,
     },
     {
       insurer: "Oriental Insurance",
-      document: orientalPdf,
+      document: "/lovable-uploads/insurerPdfs/OICHLGP449V022021_2020-2021.pdf",
       logo: orientalLogo,
     },
   ];
 
-  const filteredPolicies = insurerPolicies.filter(policy =>
+  const filteredPolicies = insurerPolicies.filter((policy) =>
     policy.insurer.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleDownloadClick = (insurer: string, documentUrl: string) => {
     console.log(`Opening policy document for ${insurer}`);
-    
+
     // Use the blob URL if available, otherwise fall back to the direct URL
     const urlToOpen = blobUrls[insurer] || documentUrl;
-    
+
     // Create and open a custom HTML document in a new window
-    const newWindow = window.open('', '_blank');
+    const newWindow = window.open("", "_blank");
     if (newWindow) {
-      const faviconPath = "/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png";
+      const faviconPath =
+        "/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png";
       // Get the absolute URL for the favicon
-      const absoluteFaviconUrl = new URL(faviconPath, window.location.origin).href;
-      
+      const absoluteFaviconUrl = new URL(faviconPath, window.location.origin)
+        .href;
+
       newWindow.document.write(`
         <!DOCTYPE html>
         <html lang="en">
@@ -196,18 +209,18 @@ const PolicyWordings = () => {
         </html>
       `);
       newWindow.document.close();
-      
+
       // Show success message
       toast.success(`Opened policy document for ${insurer}`);
     } else {
       // If popup is blocked, offer direct link
       toast.error("Popup blocked. Please allow popups to view the document.");
-      
+
       // Fallback to direct link
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = documentUrl;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -215,16 +228,16 @@ const PolicyWordings = () => {
   };
 
   return (
-    <MainLayout>
+    <>
       <head>
         {/* Add favicon link that will be inherited by child windows */}
-        <link 
-          rel="icon" 
-          href="/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png" 
+        <link
+          rel="icon"
+          href="/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png"
           type="image/png"
         />
       </head>
-      
+
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -285,7 +298,7 @@ const PolicyWordings = () => {
                   <CardContent className="p-6">
                     <div className="flex flex-col items-center text-center">
                       <div className="h-24 flex items-center justify-center mb-4">
-                        <img
+                        <Image
                           src={insurer.logo}
                           alt={`${insurer.insurer} logo`}
                           className="max-h-16 max-w-full object-contain"
@@ -304,10 +317,10 @@ const PolicyWordings = () => {
                       <div className="mt-4 flex items-center justify-center text-securenow-orange hover:underline group">
                         <FileText className="mr-2 h-5 w-5" />
                         <span>View Policy Wordings</span>
-                        <img 
-                          src={pdfFavicon} 
-                          alt="PDF" 
-                          className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" 
+                        <Image
+                          src={pdfFavicon}
+                          alt="PDF"
+                          className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity"
                         />
                         <Download className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
@@ -317,7 +330,9 @@ const PolicyWordings = () => {
               ))
             ) : (
               <div className="col-span-full text-center py-8">
-                <p className="text-lg text-gray-500">No policies found matching "{searchTerm}"</p>
+                <p className="text-lg text-gray-500">
+                  No policies found matching "{searchTerm}"
+                </p>
               </div>
             )}
           </div>
@@ -348,7 +363,7 @@ const PolicyWordings = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 
