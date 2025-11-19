@@ -1,10 +1,10 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Receipt, FileText, Clock, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import Link from 'next/link';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 const Reimbursement = () => {
+  const breadcrumbItems = [{ label: "Reimbursement" }];
   const steps = [
     {
       title: "Pay for Treatment",
@@ -39,14 +39,15 @@ const Reimbursement = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Reimbursement Claims</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Get reimbursed for your medical expenses at any hospital of your choice. 
-            Compare with <Link to="/claim-process/cashless" className="text-securenow-orange hover:underline">cashless claims</Link> to 
+            Compare with <Link href="/claim-process/cashless" className="text-securenow-orange hover:underline">cashless claims</Link> to 
             find the best option for your needs.
           </p>
         </div>
@@ -59,7 +60,7 @@ const Reimbursement = () => {
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">How Reimbursement Claims Work</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our streamlined reimbursement process ensures you get back your money with minimal hassle. 
-              Learn about our <Link to="/technology/e-claims" className="text-securenow-blue hover:underline">digital claims processing</Link> system 
+              Learn about our <Link href="/technology/e-claims" className="text-securenow-blue hover:underline">digital claims processing</Link> system 
               for faster settlements.
             </p>
           </div>
@@ -87,7 +88,7 @@ const Reimbursement = () => {
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">Required Documents</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Make sure to submit the following documents to ensure smooth processing of your reimbursement claim. 
-              Our <Link to="/service/service-calls" className="text-securenow-blue hover:underline">dedicated support team</Link> can 
+              Our <Link href="/service/service-calls" className="text-securenow-blue hover:underline">dedicated support team</Link> can 
               help you with documentation requirements.
             </p>
           </div>
@@ -114,7 +115,7 @@ const Reimbursement = () => {
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">When to Use Reimbursement Claims</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Reimbursement claims are ideal in the following scenarios. Also explore our 
-              <Link to="/claim-process/pre-post-claim" className="text-securenow-blue hover:underline"> pre and post hospitalization</Link> coverage options:
+              <Link href="/claim-process/pre-post-claim" className="text-securenow-blue hover:underline"> pre and post hospitalization</Link> coverage options:
             </p>
           </div>
 
@@ -124,7 +125,7 @@ const Reimbursement = () => {
               <p className="text-gray-600">
                 When seeking treatment at hospitals that are not part of your insurer's network, reimbursement
                 is the way to claim your expenses. Check our 
-                <Link to="/claim-process/gipsa" className="text-securenow-blue hover:underline"> GIPSA network hospitals</Link>.
+                <Link href="/claim-process/gipsa" className="text-securenow-blue hover:underline"> GIPSA network hospitals</Link>.
               </p>
             </div>
             
@@ -146,7 +147,7 @@ const Reimbursement = () => {
               <h3 className="text-xl font-bold mb-3 text-securenow-blue">OPD Treatments</h3>
               <p className="text-gray-600">
                 For outpatient department treatments that are covered under your policy. 
-                Learn about our <Link to="/product-features/cashless-opd" className="text-securenow-blue hover:underline">cashless OPD options</Link>.
+                Learn about our <Link href="/product-features/cashless-opd" className="text-securenow-blue hover:underline">cashless OPD options</Link>.
               </p>
             </div>
           </div>
@@ -154,8 +155,8 @@ const Reimbursement = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
               Need more information about claims? Visit our 
-              <Link to="/claim-process" className="text-securenow-blue hover:underline"> complete claims guide</Link> or 
-              learn about our <Link to="/service/sla" className="text-securenow-blue hover:underline"> service level agreements</Link>.
+              <Link href="/claim-process" className="text-securenow-blue hover:underline"> complete claims guide</Link> or 
+              learn about our <Link href="/service/sla" className="text-securenow-blue hover:underline"> service level agreements</Link>.
             </p>
           </div>
         </div>
@@ -167,7 +168,7 @@ const Reimbursement = () => {
           <h2 className="text-3xl font-bold mb-4">Need Help with Reimbursement Claims?</h2>
           <p className="text-xl mb-6 max-w-3xl mx-auto">
             Our dedicated team is ready to assist you with any reimbursement claim-related queries. 
-            Explore our <Link to="/service" className="text-white underline hover:no-underline">comprehensive service offerings</Link>.
+            Explore our <Link href="/service" className="text-white underline hover:no-underline">comprehensive service offerings</Link>.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -185,7 +186,7 @@ const Reimbursement = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

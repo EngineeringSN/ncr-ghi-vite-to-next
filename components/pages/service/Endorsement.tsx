@@ -1,10 +1,15 @@
 
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 
 const Endorsement = () => {
+  const breadcrumbItems = [
+    { label: "Service", href: "/service" },
+    { label: "Endorsement" },
+  ];
   return (
-    <MainLayout>
+    <>
+       <BreadcrumbNav items={breadcrumbItems} />
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-securenow-blue mb-4">Endorsement Services</h1>
@@ -69,7 +74,7 @@ const Endorsement = () => {
           </button>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

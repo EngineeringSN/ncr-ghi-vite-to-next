@@ -1,10 +1,15 @@
 
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 
 const SLA = () => {
+  const breadcrumbItems = [
+    { label: "Service", href: "/service" },
+    { label: "Sla" },
+  ];
   return (
-    <MainLayout>
+    <>
+    <BreadcrumbNav items={breadcrumbItems} />
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-securenow-blue mb-4">Service Level Agreements</h1>
@@ -122,7 +127,7 @@ const SLA = () => {
           </button>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

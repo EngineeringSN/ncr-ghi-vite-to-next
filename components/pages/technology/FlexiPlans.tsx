@@ -1,11 +1,15 @@
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Shield, ArrowRight, Check, CheckCheck, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import Link from 'next/link';
 
 const FlexiPlans = () => {
+  const breadcrumbItems = [
+    { label: "Technology", href: "/technology" },
+    { label: "Flexi-Plans" },
+  ];
   const flexiFeatures = [
     {
       title: 'Customizable Coverage',
@@ -44,8 +48,9 @@ const FlexiPlans = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Flexi Plans</h1>
@@ -71,12 +76,12 @@ const FlexiPlans = () => {
                 options through a user-friendly interface, making the enrollment process simple and efficient.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link to="/quotation">
+                <Link href="/quotation">
                   <Button className="bg-securenow-blue hover:bg-blue-800 text-white">
                     Request a Quote
                   </Button>
                 </Link>
-                <Link to="/technology">
+                <Link href="/technology">
                   <Button variant="outline" className="border-securenow-blue text-securenow-blue hover:bg-securenow-blue/10">
                     Explore Technology
                   </Button>
@@ -259,12 +264,12 @@ const FlexiPlans = () => {
             Contact our team today to learn more about how our Flexi Plans can benefit your organization.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/quotation">
+            <Link href="/quotation">
               <Button size="lg" className="bg-white text-securenow-blue hover:bg-gray-100">
                 Request a Quote
               </Button>
             </Link>
-            <Link to="/technology/dashboard">
+            <Link href="/technology/dashboard">
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                 Explore Our Dashboard
               </Button>
@@ -272,7 +277,7 @@ const FlexiPlans = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle, AlertCircle, XCircle } from 'lucide-react';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const ClaimStatus = () => {
+  const breadcrumbItems = [{ label: "Claim Status" }];
   const statusTypes = [
     {
       icon: Clock,
@@ -88,8 +89,9 @@ const ClaimStatus = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Claim Status Tracking</h1>
@@ -239,7 +241,7 @@ const ClaimStatus = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

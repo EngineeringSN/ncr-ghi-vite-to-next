@@ -1,9 +1,13 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { FileCheck, Clock, Upload, Smartphone, CircleCheck, CircleHelp, ArrowRight, FileText } from 'lucide-react';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const EClaims = () => {
+  const breadcrumbItems = [
+    { label: "Technology", href: "/technology" },
+    { label: "E-claims" },
+  ];
   const processSteps = [
     {
       icon: Upload,
@@ -60,7 +64,8 @@ const EClaims = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
+      <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -248,7 +253,7 @@ const EClaims = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

@@ -1,10 +1,11 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Smartphone, Globe, Shield, Users, LockKeyhole, Activity, Gauge, Database, ArrowRight, Youtube } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import BreadcrumbNav from '../BreadcrumbNav';
 const Technology = () => {
+  const breadcrumbItems = [{ label: "Technology" }];
   const techFeatures = [{
     icon: Smartphone,
     title: 'Mobile App Access',
@@ -49,8 +50,9 @@ const Technology = () => {
     link: "/technology/e-claims",
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
   }];
-  return <MainLayout>
+  return <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Our Technology Platform</h1>
@@ -138,7 +140,7 @@ const Technology = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-securenow-blue">{subpage.title}</h3>
                   <p className="text-gray-600 mb-4">{subpage.description}</p>
-                  <Link to={subpage.link} className="inline-flex items-center text-securenow-blue hover:text-securenow-orange font-medium">
+                  <Link href={subpage.link} className="inline-flex items-center text-securenow-blue hover:text-securenow-orange font-medium">
                     Learn more
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -324,7 +326,7 @@ const Technology = () => {
           <h2 className="text-3xl font-bold text-securenow-blue mb-4">Experience Our Technology Platform</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Schedule a demo to see how our technology can simplify health insurance management for your business in Delhi NCR.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/quotation" className="bg-securenow-blue hover:bg-blue-800 text-white py-3 px-8 rounded-md text-lg font-medium transition duration-150 ease-in-out">
+            <Link href="/quotation" className="bg-securenow-blue hover:bg-blue-800 text-white py-3 px-8 rounded-md text-lg font-medium transition duration-150 ease-in-out">
               Request a Demo
             </Link>
             <a href="https://www.youtube.com/watch?v=bntIFT8eKXE&list=PLIBd6vVHb1kLObB427u7xVCFbljnYwAAN" target="_blank" rel="noopener noreferrer" className="bg-securenow-orange hover:bg-orange-600 text-white py-3 px-8 rounded-md text-lg font-medium transition duration-150 ease-in-out inline-flex items-center justify-center gap-2">
@@ -334,6 +336,6 @@ const Technology = () => {
           </div>
         </div>
       </section>
-    </MainLayout>;
+    </>;
 };
 export default Technology;

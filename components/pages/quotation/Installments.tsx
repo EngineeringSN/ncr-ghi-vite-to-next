@@ -1,10 +1,11 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Calendar, CreditCard, Banknote, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const Installments = () => {
+  const breadcrumbItems = [{ label: "Installments" }];
   const paymentPlans = [
     {
       title: "Annual Payment",
@@ -53,8 +54,9 @@ const Installments = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-6">Premium Payment Installments</h1>
@@ -170,7 +172,7 @@ const Installments = () => {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

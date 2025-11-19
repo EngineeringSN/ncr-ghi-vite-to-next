@@ -27,6 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <head>
+        {/* Optional: If icons don’t show, you can manually include links */}
+        <link rel="icon" href="/favicon.ico" />
+        
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

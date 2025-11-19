@@ -1,9 +1,11 @@
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
+import Link from 'next/link';
 import { Building, Users, Clock, FileText, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import BreadcrumbNav from '../BreadcrumbNav';
+
 
 const TPA = () => {
+  const breadcrumbItems = [{ label: "TPA Services" }];
   const tpaProviders = [
     {
       name: "Medi Assist India TPA Services",
@@ -88,7 +90,8 @@ const TPA = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
+    <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,7 +184,7 @@ const TPA = () => {
 
                 {['medi-assist', 'fhpl', 'vidal', 'ghico'].includes(tpa.slug) ? (
                   <Link
-                    to={`/tpa/${tpa.slug}`}
+                    href={`/tpa/${tpa.slug}`}
                     className="inline-flex items-center text-securenow-blue hover:text-securenow-darkgray font-medium"
                   >
                     View Network Hospitals
@@ -250,7 +253,7 @@ const TPA = () => {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

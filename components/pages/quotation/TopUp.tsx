@@ -1,10 +1,11 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { ArrowUp, Shield, ListChecks, BadgeInfo } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const TopUp = () => {
+  const breadcrumbItems = [{ label: "TopUp" }];
   const benefitsData = [
     {
       title: "Enhanced Protection",
@@ -45,8 +46,9 @@ const TopUp = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-6">Top-Up Health Insurance</h1>
@@ -207,7 +209,7 @@ const TopUp = () => {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

@@ -1,9 +1,13 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { BarChart3, PieChart, TrendingUp, LineChart, ActivitySquare, Gauge, ArrowRight } from 'lucide-react';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const Dashboard = () => {
+  const breadcrumbItems = [
+    { label: "Technology", href: "/technology" },
+    { label: "Dashboard" },
+  ];
   const dashboardFeatures = [{
     icon: BarChart3,
     title: 'Claims Analytics',
@@ -30,8 +34,9 @@ const Dashboard = () => {
     description: 'Compare your plan performance against industry standards and benchmarks.'
   }];
 
-  return <MainLayout>
+  return <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">HR Management Dashboard</h1>
@@ -130,7 +135,7 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
-    </MainLayout>;
+    </>;
 };
 
 export default Dashboard;

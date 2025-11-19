@@ -1,9 +1,10 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Workflow, ClipboardList, CheckCircle, AlertCircle } from 'lucide-react';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const Process = () => {
+  const breadcrumbItems = [{ label: "Process" }];
   const steps = [
     {
       title: "Information Collection",
@@ -28,8 +29,9 @@ const Process = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-6">Quotation Process</h1>
@@ -93,7 +95,7 @@ const Process = () => {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

@@ -1,13 +1,14 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
+
 import { Shield, Users, BookOpen, Activity, Check, FileText, Building } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const Consulting = () => {
+  const breadcrumbItems = [{ label: "Consulting" }];
   const keyBenefits = [
     "Coverage for pre-existing conditions",
     "Mental health counseling & therapy sessions",
@@ -50,7 +51,8 @@ const Consulting = () => {
   ];
   
   return (
-    <MainLayout>
+    <>
+     <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="max-w-4xl mx-auto py-16 text-center">
         <h1 className="text-4xl font-bold text-securenow-blue mb-4">Group Health Insurance for the Consulting Industry</h1>
@@ -215,7 +217,7 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

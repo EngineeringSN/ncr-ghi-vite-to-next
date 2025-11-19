@@ -1,11 +1,16 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
-import { Link } from 'react-router-dom';
+// import MainLayout from '@/layouts/MainLayout';
+// import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
+import Link from "next/link";
+import BreadcrumbNav from '../BreadcrumbNav';
 
-const Industry = () => (
-  <MainLayout>
+const Industry = () => {
+  const breadcrumbItems = [{ label: "Industry" }];
+  return(
+  <>
+  <BreadcrumbNav items={breadcrumbItems} />
     <section className="bg-securenow-blue text-white py-16">
       <div className="max-w-3xl mx-auto text-center px-4">
         <h1 className="text-4xl font-bold mb-4">Why Group Health Insurance is Needed for Different Industries?</h1>
@@ -37,7 +42,7 @@ const Industry = () => (
             <p className="mb-2"><span className="font-medium">Insurance Benefits:</span> Teleconsultations, mental wellness coverage, preventive checkups.</p>
             <p className="mb-2"><span className="font-medium">Why It Matters:</span> Helps attract top tech talent and improves employee retention.</p>
             <div className="mt-4">
-              <Link to="/industry/tech" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
+              <Link href="/industry/tech" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
         </Card>
@@ -49,7 +54,7 @@ const Industry = () => (
             <p className="mb-2"><span className="font-medium">Insurance Benefits:</span> Mental health counseling, cashless hospitalization, preventive health checkups.</p>
             <p className="mb-2"><span className="font-medium">Why It Matters:</span> Critical for talent attraction & retention in a competitive industry.</p>
             <div className="mt-4">
-              <Link to="/industry/consulting" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
+              <Link href="/industry/consulting" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
         </Card>
@@ -61,7 +66,7 @@ const Industry = () => (
             <p className="mb-2"><span className="font-medium">Insurance Benefits:</span> Accident coverage, hospitalization, wellness programs.</p>
             <p className="mb-2"><span className="font-medium">Why It Matters:</span> Supports diverse team needs across operations, tech, and logistics.</p>
             <div className="mt-4">
-              <Link to="/industry/e-commerce" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
+              <Link href="/industry/e-commerce" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
         </Card>
@@ -73,7 +78,7 @@ const Industry = () => (
             <p className="mb-2"><span className="font-medium">Insurance Benefits:</span> Accidental care, hospitalization, mental wellness support.</p>
             <p className="mb-2"><span className="font-medium">Why It Matters:</span> Improves retention in high-turnover roles and boosts team morale.</p>
             <div className="mt-4">
-              <Link to="/industry/food" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
+              <Link href="/industry/food" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
         </Card>
@@ -85,7 +90,7 @@ const Industry = () => (
             <p className="mb-2"><span className="font-medium">Insurance Benefits:</span> Accident coverage, emergency treatment, hospitalization.</p>
             <p className="mb-2"><span className="font-medium">Why It Matters:</span> Protects high-risk workers and ensures compliance with safety standards.</p>
             <div className="mt-4">
-              <Link to="/industry/construction" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
+              <Link href="/industry/construction" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
         </Card>
@@ -97,7 +102,7 @@ const Industry = () => (
             <p className="mb-2"><span className="font-medium">Insurance Benefits:</span> Customizable plans, affordable premiums, scalable coverage.</p>
             <p className="mb-2"><span className="font-medium">Why It Matters:</span> Enhances company image and helps in talent acquisition despite size.</p>
             <div className="mt-4">
-              <Link to="/industry/small-business" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
+              <Link href="/industry/small-business" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
         </Card>
@@ -187,14 +192,14 @@ const Industry = () => (
           Whether you're in tech, manufacturing, education, or hospitality, offering group health insurance builds trust, improves retention, and reflects a strong company culture.
         </p>
         <div className="mt-6">
-          <Link to="/quotation" className="bg-securenow-blue hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium transition">
+          <Link href="/quotation" className="bg-securenow-blue hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium transition">
             Get a Quote
           </Link>
           <p className="text-gray-600 mt-4">Looking to set up group health insurance for your team? Let's make it easy.</p>
         </div>
       </div>
     </section>
-  </MainLayout>
+    </>
 );
-
+}
 export default Industry;

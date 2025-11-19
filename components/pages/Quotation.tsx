@@ -26,6 +26,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import BreadcrumbNav from "../BreadcrumbNav";
 const formSchema = z.object({
   companyName: z.string().min(2, "Company name is required"),
   cityName: z.string().min(2, "City name is required"),
@@ -157,8 +158,10 @@ const Quotation = () => {
       });
     }
   };
+  const breadcrumbItems = [{ label: "Quotation" }];
   return (
     <>
+    <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Get a Customized Quote</h1>

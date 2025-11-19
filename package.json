@@ -2,10 +2,16 @@
   "name": "ncr-ghi-nextjs",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+ "scripts": {
     "dev": "next dev --turbopack",
+    "dev:uat": "dotenv -e .env.uat -- next dev --turbopack",
+    "dev:prod": "dotenv -e .env.production -- next dev --turbopack",
     "build": "next build",
+    "build:uat": "dotenv -e .env.uat -- next build",
+    "build:prod": "dotenv -e .env.production -- next build",
     "start": "next start",
+    "start:uat": "dotenv -e .env.uat -- next start",
+    "start:prod": "dotenv -e .env.production -- next start",
     "lint": "next lint"
   },
   "dependencies": {

@@ -1,19 +1,19 @@
 
+import Head from 'next/head';
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
-import ServiceHeader from '@/components/service/ServiceHeader';
-import ServiceCommitment from '@/components/service/ServiceCommitment';
-import ServiceFeatures from '@/components/service/ServiceFeatures';
-import ServiceProcess from '@/components/service/ServiceProcess';
-import ServiceTestimonials from '@/components/service/ServiceTestimonials';
-import ServiceTeam from '@/components/service/ServiceTeam';
-import ServiceCTA from '@/components/service/ServiceCTA';
-import { Helmet } from 'react-helmet-async';
+import ServiceHeader from './service/ServiceHeader';
+import ServiceCommitment from './service/ServiceCommitment';
+import ServiceFeatures from './service/ServiceFeatures';
+import ServiceProcess from './service/ServiceProcess';
+import ServiceTestimonials from './service/ServiceTestimonials';
+import ServiceTeam from './service/ServiceTeam';
+import ServiceCTA from './service/ServiceCTA';
+
 
 const Service = () => {
   return (
-    <MainLayout>
-      <Helmet>
+    <>
+      <Head>
               <title>Premium Health Insurance Services | Dedicated Account Management</title>
               <meta name="description" content="Experience exceptional health insurance services with dedicated account managers, 24/7 support, policy administration, and personalized assistance for your business." />
               <meta name="keywords" content="health insurance services, dedicated account management, insurance customer service, policy administration" />
@@ -39,7 +39,7 @@ const Service = () => {
               <link rel="icon" href="/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png" type="image/png" sizes="32x32" />
               <link rel="apple-touch-icon" href="/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png" />
               <link rel="canonical" href="https://grouphealthinsurance.co/service" />
-            </Helmet>
+            </Head>
  
       <ServiceHeader />
       <ServiceCommitment />
@@ -48,7 +48,7 @@ const Service = () => {
       <ServiceTestimonials />
       <ServiceTeam />
       <ServiceCTA />
-    </MainLayout>
+    </>
   );
 };
 

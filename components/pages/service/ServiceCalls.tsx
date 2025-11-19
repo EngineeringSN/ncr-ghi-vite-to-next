@@ -1,11 +1,16 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Phone, Calendar, Clock, FileText, Shield } from 'lucide-react';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const ServiceCalls = () => {
+  const breadcrumbItems = [
+    { label: "Service", href: "/service" },
+    { label: "Service-Calls" },
+  ];
   return (
-    <MainLayout>
+    <>
+      <BreadcrumbNav items={breadcrumbItems} />
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-securenow-blue mb-4">Service Calls</h1>
@@ -145,7 +150,7 @@ const ServiceCalls = () => {
           </button>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

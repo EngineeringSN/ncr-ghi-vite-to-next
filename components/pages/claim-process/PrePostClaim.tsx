@@ -1,9 +1,10 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { FileText, Receipt, Clock, CheckCircle } from 'lucide-react';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const PrePostClaim = () => {
+  const breadcrumbItems = [{ label: "Pre-post-claim" }];
   const eligibleExpenses = [
     "Doctor consultations before or after hospitalization",
     "Diagnostic tests and investigations",
@@ -37,8 +38,9 @@ const PrePostClaim = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Pre & Post Hospitalization Claims</h1>
@@ -178,7 +180,7 @@ const PrePostClaim = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

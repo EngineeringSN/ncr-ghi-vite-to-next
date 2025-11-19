@@ -1,9 +1,10 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { CheckCircle, FilePlus, Clock, BadgeCheck, HelpCircle } from 'lucide-react';
+import BreadcrumbNav from '../BreadcrumbNav';
 
 const ClaimProcess = () => {
+  const breadcrumbItems = [{ label: "Claim Process" }];
   const claimSteps = [
     {
       icon: FilePlus,
@@ -59,7 +60,8 @@ const ClaimProcess = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
+    <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -248,7 +250,7 @@ const ClaimProcess = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

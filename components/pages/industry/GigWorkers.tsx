@@ -1,8 +1,10 @@
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
-import { Link } from 'react-router-dom';
+
 const GigWorkers = () => {
-  return <MainLayout>
+  const breadcrumbItems = [{ label: "Gig-Workers" }];
+  return <>
+    <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-3xl mx-auto text-center px-4">
           <h1 className="text-4xl font-bold mb-4">Group Health Insurance for Gig Economy Workers</h1>
@@ -236,6 +238,6 @@ const GigWorkers = () => {
           </div>
         </div>
       </section>
-    </MainLayout>;
+    </>;
 };
 export default GigWorkers;

@@ -146,7 +146,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-securenow-orange transition duration-150 ease-in-out"
                 >
                   Privacy Policy

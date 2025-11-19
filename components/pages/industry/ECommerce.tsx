@@ -1,13 +1,13 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
 import { Shield, Users, ShoppingCart, Activity, Check, FileText, Building } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const ECommerce = () => {
+  const breadcrumbItems = [{ label: "e-commerce" }];
   const keyBenefits = [
     "Coverage for hospitalization & surgeries", 
     "Emergency care for warehouse & delivery staff", 
@@ -49,8 +49,9 @@ const ECommerce = () => {
   ];
   
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="max-w-4xl mx-auto py-16 text-center">
         <h1 className="text-4xl font-bold text-securenow-blue mb-4">Group Health Insurance for the E-Commerce Industry</h1>
         <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
@@ -214,7 +215,7 @@ const ECommerce = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

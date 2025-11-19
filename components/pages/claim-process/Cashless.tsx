@@ -1,10 +1,12 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
+import Link from 'next/link';
 import { Hospital, BadgeCheck, Clock, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+
 
 const Cashless = () => {
+  const breadcrumbItems = [{ label: "Cashless" }];
   const steps = [
     {
       title: "Pre-authorization",
@@ -29,14 +31,15 @@ const Cashless = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
+    <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Cashless Claims</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Get treatment without paying hospital bills upfront at our 
-            <Link to="/claim-process/gipsa" className="text-securenow-orange hover:underline"> extensive network hospitals</Link>.
+            <Link href="/claim-process/gipsa" className="text-securenow-orange hover:underline"> extensive network hospitals</Link>.
           </p>
         </div>
       </section>
@@ -48,7 +51,7 @@ const Cashless = () => {
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">How Cashless Claims Work</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our streamlined cashless claim process ensures you receive treatment without financial worries. 
-              Compare with our <Link to="/claim-process/reimbursement" className="text-securenow-blue hover:underline">reimbursement process</Link> to 
+              Compare with our <Link href="/claim-process/reimbursement" className="text-securenow-blue hover:underline">reimbursement process</Link> to 
               choose the best option for your situation.
             </p>
           </div>
@@ -76,7 +79,7 @@ const Cashless = () => {
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">Benefits of Cashless Claims</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Cashless claims offer several advantages for employees and organizations. 
-              Learn about <Link to="/claim-process/pre-post-claim" className="text-securenow-blue hover:underline">pre and post hospitalization coverage</Link> included 
+              Learn about <Link href="/claim-process/pre-post-claim" className="text-securenow-blue hover:underline">pre and post hospitalization coverage</Link> included 
               in your policy.
             </p>
           </div>
@@ -110,8 +113,8 @@ const Cashless = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
               Want to explore other claim options? Learn about our 
-              <Link to="/claim-process/reimbursement" className="text-securenow-blue hover:underline"> reimbursement claims</Link> or 
-              view our complete <Link to="/claim-process" className="text-securenow-blue hover:underline"> claim process overview</Link>.
+              <Link href="/claim-process/reimbursement" className="text-securenow-blue hover:underline"> reimbursement claims</Link> or 
+              view our complete <Link href="/claim-process" className="text-securenow-blue hover:underline"> claim process overview</Link>.
             </p>
           </div>
         </div>
@@ -123,7 +126,7 @@ const Cashless = () => {
           <h2 className="text-3xl font-bold mb-4">Need Help with Cashless Claims?</h2>
           <p className="text-xl mb-6 max-w-3xl mx-auto">
             Our dedicated team is ready to assist you with any cashless claim-related queries. 
-            Learn more about our <Link to="/service/service-calls" className="text-securenow-orange hover:underline">dedicated service support</Link>.
+            Learn more about our <Link href="/service/service-calls" className="text-securenow-orange hover:underline">dedicated service support</Link>.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -141,7 +144,7 @@ const Cashless = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 
