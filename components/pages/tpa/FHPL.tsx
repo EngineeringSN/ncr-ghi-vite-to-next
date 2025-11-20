@@ -1,6 +1,6 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
+// import MainLayout from '@/layouts/MainLayout';
 import { Phone, Mail, MapPin, Building, Clock, Users } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
@@ -29,7 +29,7 @@ const FHPL = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,7 +177,7 @@ const FHPL = () => {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

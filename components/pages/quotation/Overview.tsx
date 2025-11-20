@@ -1,6 +1,6 @@
 
 import React from 'react';
-import MainLayout from '@/layouts/MainLayout';
+// import MainLayout from '@/layouts/MainLayout';
 import { FileText, Clock, Users, Shield, CheckCircle, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -45,7 +45,7 @@ const Overview = () => {
   ];
 
   return (
-    <MainLayout>
+    <>
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -168,7 +168,7 @@ const Overview = () => {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 };
 

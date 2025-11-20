@@ -80,7 +80,7 @@ const SEOSchema = () => {
   const getFaqData = () => {
     // Default: No FAQs
     let hasFaqs = false;
-    let faqItems = [];
+    let faqItems: { question: string; answer: string }[] = [];
     
     // Industry pages FAQs
     if (location.pathname === "/industry") {
