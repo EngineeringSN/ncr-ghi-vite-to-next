@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from "next/navigation";;
 
 const SEOSchema = () => {
-  const location = useLocation();
+  const pathname = usePathname();
   
   // Get business info based on the current route
   const getBusinessInfo = () => {
@@ -11,7 +11,7 @@ const SEOSchema = () => {
     let description = "Comprehensive group health insurance solutions for businesses in India";
     
     // Route-specific information with improved descriptions
-    switch (location.pathname) {
+    switch (pathname) {
       case "/insurers":
         name = "SecureNow - Top Insurance Partners";
         description = "Our trusted insurance partners providing comprehensive coverage with excellent claim settlement records";
