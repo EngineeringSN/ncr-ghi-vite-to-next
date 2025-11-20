@@ -14,6 +14,7 @@ import orientalLogo from "@/public/lovable-uploads/oriental.png";
 import aditiyaLogo from "@/public/lovable-uploads/abhi-logo.png";
 import manipalLogo from "@/public/lovable-uploads/cigna.png";
 import sbiLogo from "@/public/lovable-uploads/sbig-logo.png";
+import BreadcrumbSchema from "../BreadcrumbSchema";
 
 const Insurers = () => {
   const breadcrumbItems = [{ label: "Insurance Partners" }];
@@ -107,6 +108,7 @@ const Insurers = () => {
 
   return (
     <>
+    <BreadcrumbSchema />
       <BreadcrumbNav items={breadcrumbItems} />
 
       {/* Header Section */}
