@@ -1,24 +1,16 @@
 
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import MainLayout from "@/layouts/MainLayout";
 
 const NotFound = () => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+    console.error("404 Error: User attempted to access:", pathname);
+  }, [pathname]);
 
   return (
-    <MainLayout 
-      customTitle="Page Not Found | SecureNow"
-      customDescription="The page you're looking for doesn't exist. Please check the URL or navigate back to our homepage."
-      customKeywords="404, page not found, error, SecureNow"
-    >
+    <>
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">404</h1>
@@ -28,7 +20,7 @@ const NotFound = () => {
           </a>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 
