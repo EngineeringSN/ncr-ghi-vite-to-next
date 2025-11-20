@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const FlexiPlans = () => {
   const breadcrumbItems = [
@@ -49,6 +50,7 @@ const FlexiPlans = () => {
 
   return (
     <>
+    <BreadcrumbSchema/>
       {/* Header Section */}
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
