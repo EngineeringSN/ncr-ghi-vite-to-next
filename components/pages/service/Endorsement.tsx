@@ -1,5 +1,6 @@
 
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import React from 'react';
 
 const Endorsement = () => {
@@ -9,6 +10,7 @@ const Endorsement = () => {
   ];
   return (
     <>
+    <BreadcrumbSchema/>
        <BreadcrumbNav items={breadcrumbItems} />
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="text-center mb-12">

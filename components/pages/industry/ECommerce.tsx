@@ -5,9 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const ECommerce = () => {
-  const breadcrumbItems = [{ label: "e-commerce" }];
+  const breadcrumbItems = [{ label: "Industry" },{ label: "e-commerce" }];
   const keyBenefits = [
     "Coverage for hospitalization & surgeries", 
     "Emergency care for warehouse & delivery staff", 
@@ -51,6 +52,7 @@ const ECommerce = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="max-w-4xl mx-auto py-16 text-center">
         <h1 className="text-4xl font-bold text-securenow-blue mb-4">Group Health Insurance for the E-Commerce Industry</h1>

@@ -2,9 +2,10 @@
 import React from 'react';
 import { FileText, Hospital, Receipt, CheckCircle } from 'lucide-react';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const GIPSA = () => {
-  const breadcrumbItems = [{ label: "Gipsa claims" }];
+  const breadcrumbItems = [{ label: "Claim Process" },{ label: "Gipsa claims" }];
   const gipsaFeatures = [
     "Standardized treatment costs across network hospitals",
     "Package rates for common procedures and surgeries",
@@ -34,6 +35,7 @@ const GIPSA = () => {
 
   return (
     <>
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">

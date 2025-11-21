@@ -3,6 +3,8 @@ import React from 'react';
 // import MainLayout from '@/layouts/MainLayout';
 import { Phone, Mail, MapPin, Building, Clock, Users } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const Vidal = () => {
   const hospitals = [
@@ -28,9 +30,16 @@ const Vidal = () => {
     { name: "Action Cancer Hospital", location: "Paschim Vihar, Delhi", type: "Cancer Specialty", cashless: "24x7" }
   ];
 
+  const breadcrumbItems = [
+    { label: "Tpa", href: "/tpa" },
+    { label: "Vidal" },
+  ];
+
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

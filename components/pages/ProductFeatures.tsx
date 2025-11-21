@@ -14,6 +14,8 @@ import {
   Bed,
 } from "lucide-react";
 import Link from "next/link";
+import BreadcrumbSchema from "../BreadcrumbSchema";
+import BreadcrumbNav from "../BreadcrumbNav";
 const ProductFeatures = () => {
   const features = [
     {
@@ -97,9 +99,13 @@ const ProductFeatures = () => {
     },
   ];
 
+  const breadcrumbItems = [{ label: "product-features" }];
+
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">
