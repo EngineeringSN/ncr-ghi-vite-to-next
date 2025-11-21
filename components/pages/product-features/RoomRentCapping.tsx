@@ -9,11 +9,16 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 
 const RoomRentCapping = () => {
+  const breadcrumbItems = [{ label: "product-features" },{ label: "room-rent-capping" }];
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Room Rent Capping</h1>

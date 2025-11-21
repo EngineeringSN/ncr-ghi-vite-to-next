@@ -3,10 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { Hospital, BadgeCheck, Clock, CheckCircle } from 'lucide-react';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 
 const Cashless = () => {
-  const breadcrumbItems = [{ label: "Cashless" }];
+  const breadcrumbItems = [{ label: "Claim Process" },{ label: "Cashless" }];
   const steps = [
     {
       title: "Pre-authorization",
@@ -32,6 +33,7 @@ const Cashless = () => {
 
   return (
     <>
+    <BreadcrumbSchema/>
     <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">

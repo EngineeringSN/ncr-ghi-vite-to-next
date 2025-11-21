@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle, FilePlus, Clock, BadgeCheck, HelpCircle } from 'lucide-react';
 import BreadcrumbNav from '../BreadcrumbNav';
+import BreadcrumbSchema from '../BreadcrumbSchema';
 
 const ClaimProcess = () => {
   const breadcrumbItems = [{ label: "Claim Process" }];
@@ -61,6 +62,7 @@ const ClaimProcess = () => {
 
   return (
     <>
+    <BreadcrumbSchema/>
     <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
