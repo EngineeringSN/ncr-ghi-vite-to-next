@@ -1,4 +1,6 @@
 "use client";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import React from "react";
 import {
   BarChart,
@@ -53,10 +55,12 @@ const ClaimSettlementRate = () => {
       Bajaj: 91.8,
     },
   ];
-
+  const breadcrumbItems = [{ label: "insurers" },{ label: "claim-settlement-rate" }];
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-6">Claim Settlement Rate</h1>

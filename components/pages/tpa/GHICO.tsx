@@ -2,6 +2,8 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Building, Clock, Users } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const GHICO = () => {
   const hospitals = [
@@ -27,9 +29,16 @@ const GHICO = () => {
     { name: "Northern Railway Central Hospital", location: "Basant Lane, Delhi", type: "Government", cashless: "Business Hours" }
   ];
 
+  const breadcrumbItems = [
+    { label: "Tpa", href: "/tpa" },
+    { label: "Ghico" },
+  ];
+
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
+      <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

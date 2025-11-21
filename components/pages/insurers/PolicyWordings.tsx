@@ -32,6 +32,8 @@ import sbiLogo from "../../../public/lovable-uploads/sbig-logo.png";
 import tataLogo from "../../../public/lovable-uploads/TataAIG.png";
 import orientalLogo from "../../../public/lovable-uploads/oriental.png";
 import pdfFavicon from "../../../public/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 
 const PolicyWordings = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -226,6 +228,7 @@ const PolicyWordings = () => {
       document.body.removeChild(link);
     }
   };
+  const breadcrumbItems = [{ label: "insurers" },{ label: "policy-wordings" }];
 
   return (
     <>
@@ -237,7 +240,8 @@ const PolicyWordings = () => {
           type="image/png"
         />
       </head>
-
+<BreadcrumbSchema/>
+<BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

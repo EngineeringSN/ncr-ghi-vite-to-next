@@ -2,9 +2,10 @@
 import React from 'react';
 import { Stethoscope, Pill, Clipboard, HeartPulse, AlertCircle } from 'lucide-react';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const OPD = () => {
-  const breadcrumbItems = [{ label: "OPD" }];
+  const breadcrumbItems = [{ label: "Quotation" },{ label: "OPD" }];
   const opdFeatures = [
     {
       title: "Doctor Consultations",
@@ -45,6 +46,7 @@ const OPD = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

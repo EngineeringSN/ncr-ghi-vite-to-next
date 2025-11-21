@@ -8,9 +8,12 @@ import ServiceProcess from './service/ServiceProcess';
 import ServiceTestimonials from './service/ServiceTestimonials';
 import ServiceTeam from './service/ServiceTeam';
 import ServiceCTA from './service/ServiceCTA';
+import BreadcrumbSchema from '../BreadcrumbSchema';
+import BreadcrumbNav from '../BreadcrumbNav';
 
 
 const Service = () => {
+  const breadcrumbItems = [{ label: "Service" }];
   return (
     <>
       <Head>
@@ -40,6 +43,8 @@ const Service = () => {
               <link rel="apple-touch-icon" href="/lovable-uploads/58de68a1-b69f-4c6c-a156-1e37e1dfd850.png" />
               <link rel="canonical" href="https://grouphealthinsurance.co/service" />
             </Head>
+            <BreadcrumbSchema/>
+      <BreadcrumbNav items={breadcrumbItems} />
  
       <ServiceHeader />
       <ServiceCommitment />

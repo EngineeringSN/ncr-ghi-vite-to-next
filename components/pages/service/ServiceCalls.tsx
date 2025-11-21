@@ -2,6 +2,7 @@
 import React from 'react';
 import { Phone, Calendar, Clock, FileText, Shield } from 'lucide-react';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const ServiceCalls = () => {
   const breadcrumbItems = [
@@ -10,6 +11,7 @@ const ServiceCalls = () => {
   ];
   return (
     <>
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="text-center mb-12">

@@ -6,8 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 const Tech = () => {
-  const breadcrumbItems = [{ label: "Tech" }];
+  const breadcrumbItems = [{ label: "Industry" },{ label: "Tech" }];
   const keyFeatures = ["Cashless hospitalization at network hospitals", "Coverage for pre-existing conditions", "Maternity benefits and child coverage", "Mental wellness & teleconsultations", "Add-on options for family members", "Annual preventive health checkups", "Customizable plans for startups to large enterprises"];
   const healthRisks = ["Eye strain", "Poor posture", "Burnout", "Anxiety and stress"];
   const companies = ["Tech startups (5+ employees)", "Product & software development companies", "SaaS platforms", "IT consulting firms", "Remote-first and hybrid tech teams"];
@@ -29,6 +30,7 @@ const Tech = () => {
   }];
   return <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="max-w-4xl mx-auto py-16 text-center">
         <h1 className="text-4xl font-bold text-securenow-blue mb-4">Group Health Insurance for the Tech Industry</h1>

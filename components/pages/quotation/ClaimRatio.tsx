@@ -4,9 +4,10 @@ import { PieChart, BarChart, Info, TrendingDown } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const ClaimRatio = () => {
-  const breadcrumbItems = [{ label: "Claim Ratio" }];
+  const breadcrumbItems = [{ label: "Quotation" },{ label: "Claim Ratio" }];
   const insurers = [
     { name: "Star Health", ratio: "82%", impact: "Moderate" },
     { name: "HDFC Ergo", ratio: "78%", impact: "Low" },
@@ -17,6 +18,7 @@ const ClaimRatio = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

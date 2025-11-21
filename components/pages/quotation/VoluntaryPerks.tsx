@@ -2,9 +2,10 @@
 import React from 'react';
 import { Gift, Star, Maximize, Smile } from 'lucide-react';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const VoluntaryPerks = () => {
-  const breadcrumbItems = [{ label: "Voluntary Perks" }];
+  const breadcrumbItems = [{ label: "Quotation" },{ label: "Voluntary Perks" }];
   const perkCategories = [
     {
       title: "Wellness Programs",
@@ -55,6 +56,7 @@ const VoluntaryPerks = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
