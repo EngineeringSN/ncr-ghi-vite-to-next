@@ -4,6 +4,7 @@ import { Smartphone, Globe, Shield, Users, LockKeyhole, Activity, Gauge, Databas
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import BreadcrumbNav from '../BreadcrumbNav';
+import BreadcrumbSchema from '../BreadcrumbSchema';
 const Technology = () => {
   const breadcrumbItems = [{ label: "Technology" }];
   const techFeatures = [{
@@ -52,6 +53,7 @@ const Technology = () => {
   }];
   return <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -219,13 +221,13 @@ const Technology = () => {
                 </div>
                 <div className="mt-8">
                   <div className="flex space-x-4">
-                    <a href="https://securenow.app/login" className="bg-black text-white px-4 py-2 rounded-md flex items-center hover:bg-gray-900 transition">
+                    <a href="https://apps.apple.com/in/app/securenow/id6754903367" className="bg-black text-white px-4 py-2 rounded-md flex items-center hover:bg-gray-900 transition">
                       <svg className="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.5,2H8.5C6.5,2,5,3.5,5,5.5v13C5,20.5,6.5,22,8.5,22h9c2,0,3.5-1.5,3.5-3.5v-13C21,3.5,19.5,2,17.5,2z M13,20.5h-2C10.2,20.5,10,20.3,10,20c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5C13.5,20.3,13.3,20.5,13,20.5z M18,18H6V5h12V18z" />
                       </svg>
                       <span>App Store</span>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=app.securenow.twa&pli=1" className="bg-black text-white px-4 py-2 rounded-md flex items-center hover:bg-gray-900 transition">
+                    <a href="https://play.google.com/store/apps/details?id=com.snapp.securenow&pcampaignid=web_share" className="bg-black text-white px-4 py-2 rounded-md flex items-center hover:bg-gray-900 transition">
                       <svg className="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3.5,20.5c0,0.6,0.5,1,1,1h1.5c0.5,0,0.9-0.4,0.9-0.9L7.1,7L3.5,9.2V20.5z M14.5,2.5L11,4.8L14.5,7V2.5z M7.9,4.2L4.1,6.5 c-0.3,0.2-0.5,0.5-0.5,0.9V8l4-2.5L7.9,4.2z M19.5,10l-4-2.5V13h4V10z M20.5,13h-1v6.5c0,0.6-0.5,1-1,1h-10v-15L20.5,13z" />
                       </svg>

@@ -3,8 +3,9 @@ import React from 'react';
 import { Receipt, FileText, Clock, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 const Reimbursement = () => {
-  const breadcrumbItems = [{ label: "Reimbursement" }];
+  const breadcrumbItems = [{ label: "Claim Process" },{ label: "Reimbursement" }];
   const steps = [
     {
       title: "Pay for Treatment",
@@ -41,6 +42,7 @@ const Reimbursement = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

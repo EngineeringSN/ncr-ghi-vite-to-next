@@ -6,9 +6,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const Consulting = () => {
-  const breadcrumbItems = [{ label: "Consulting" }];
+  const breadcrumbItems = [{ label: "Industry" },{ label: "Consulting" }];
   const keyBenefits = [
     "Coverage for pre-existing conditions",
     "Mental health counseling & therapy sessions",
@@ -52,6 +53,7 @@ const Consulting = () => {
   
   return (
     <>
+    <BreadcrumbSchema/>
      <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="max-w-4xl mx-auto py-16 text-center">

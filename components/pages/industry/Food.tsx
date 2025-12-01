@@ -5,9 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const Food = () => {
-  const breadcrumbItems = [{ label: "Food" }];
+  const breadcrumbItems = [{ label: "Industry" },{ label: "Food" }];
   const keyBenefits = [
     "Cashless hospitalization at a wide network of hospitals",
     "Accidental and emergency care for on-ground workers",
@@ -52,6 +53,7 @@ const Food = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="max-w-4xl mx-auto py-16 text-center">
         <h1 className="text-4xl font-bold text-securenow-blue mb-4">Group Health Insurance for the Food Industry</h1>

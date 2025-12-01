@@ -5,9 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const Construction = () => {
-  const breadcrumbItems = [{ label: "Construction" }];
+  const breadcrumbItems = [{ label: "Industry" },{ label: "Construction" }];
   const keyBenefits = ["Emergency & accident hospitalization", "In-patient & daycare treatments", "OPD and teleconsultation (optional)", "Maternity & dependent cover", "Coverage for chronic illnesses and pre-existing conditions", "Mental health & stress management support", "Tax deductions for the employer"];
   const coverageFor = ["On-site workers and laborers", "Engineers and project managers", "Supervisors and safety officers", "Administrative and office staff", "Contract and third-party personnel (optional)"];
   const faqs = [{
@@ -30,6 +31,7 @@ const Construction = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="max-w-4xl mx-auto py-16 text-center">
         <h1 className="text-4xl font-bold text-securenow-blue mb-4">Group Health Insurance for the Construction Industry</h1>

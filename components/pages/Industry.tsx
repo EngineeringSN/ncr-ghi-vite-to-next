@@ -5,11 +5,13 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from "next/link";
 import BreadcrumbNav from '../BreadcrumbNav';
+import BreadcrumbSchema from '../BreadcrumbSchema';
 
 const Industry = () => {
   const breadcrumbItems = [{ label: "Industry" }];
   return(
   <>
+  <BreadcrumbSchema/>
   <BreadcrumbNav items={breadcrumbItems} />
     <section className="bg-securenow-blue text-white py-16">
       <div className="max-w-3xl mx-auto text-center px-4">

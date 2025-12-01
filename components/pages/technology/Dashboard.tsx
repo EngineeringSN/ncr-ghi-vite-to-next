@@ -2,6 +2,7 @@
 import React from 'react';
 import { BarChart3, PieChart, TrendingUp, LineChart, ActivitySquare, Gauge, ArrowRight } from 'lucide-react';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const Dashboard = () => {
   const breadcrumbItems = [
@@ -36,6 +37,7 @@ const Dashboard = () => {
 
   return <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

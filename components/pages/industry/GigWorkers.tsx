@@ -1,9 +1,11 @@
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import React from 'react';
 
 const GigWorkers = () => {
-  const breadcrumbItems = [{ label: "Gig-Workers" }];
+  const breadcrumbItems = [{ label: "Industry" },{ label: "Gig-Workers" }];
   return <>
+    <BreadcrumbSchema/>
     <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-3xl mx-auto text-center px-4">

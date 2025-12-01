@@ -3,9 +3,10 @@ import React from 'react';
 import { Calendar, CreditCard, Banknote, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const Installments = () => {
-  const breadcrumbItems = [{ label: "Installments" }];
+  const breadcrumbItems = [{ label: "Quotation" },{ label: "Installments" }];
   const paymentPlans = [
     {
       title: "Annual Payment",
@@ -56,6 +57,7 @@ const Installments = () => {
   return (
     <>
       {/* Header Section */}
+      <BreadcrumbSchema/>
       <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

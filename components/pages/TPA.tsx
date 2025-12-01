@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Building, Users, Clock, FileText, ArrowRight } from 'lucide-react';
 import BreadcrumbNav from '../BreadcrumbNav';
+import BreadcrumbSchema from '../BreadcrumbSchema';
 
 
 const TPA = () => {
@@ -91,6 +92,7 @@ const TPA = () => {
 
   return (
     <>
+    <BreadcrumbSchema/>
     <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">

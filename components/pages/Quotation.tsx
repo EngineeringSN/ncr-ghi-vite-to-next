@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import BreadcrumbNav from "../BreadcrumbNav";
+import BreadcrumbSchema from "../BreadcrumbSchema";
 const formSchema = z.object({
   companyName: z.string().min(2, "Company name is required"),
   cityName: z.string().min(2, "City name is required"),
@@ -161,6 +162,7 @@ const Quotation = () => {
   const breadcrumbItems = [{ label: "Quotation" }];
   return (
     <>
+    <BreadcrumbSchema/>
     <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
