@@ -185,7 +185,7 @@ const RoomRentCapping = () => {
                 Group Insurance Room Rent Options
               </h3>
               <p className="text-gray-700 mb-4">
-                SecureNow offers various room rent options in our group health
+                We offers various room rent options in our group health
                 insurance plans:
               </p>
               <ul className="space-y-2 text-gray-700">

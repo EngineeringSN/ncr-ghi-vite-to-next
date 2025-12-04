@@ -1,9 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { Phone, Mail, FileText, Building, MapPin } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 const NewIndiaAssurance = () => {
+  const breadcrumbItems = [{ label: "insurers" },{ label: "new-india-assurance" }];
   return (
     <>
+    <BreadcrumbSchema/>
+    <BreadcrumbNav items={breadcrumbItems} />
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center">

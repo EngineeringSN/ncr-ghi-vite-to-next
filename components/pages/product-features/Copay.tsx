@@ -175,7 +175,7 @@ const Copay = () => {
 
                   <div className="mt-6 pt-4 border-t border-gray-200">
                     <p className="text-gray-700 text-sm mb-4">
-                      SecureNow recommends group health insurance policies
+                      We recommends group health insurance policies
                       without co-pay clauses for better employee benefits and
                       satisfaction.
                     </p>
