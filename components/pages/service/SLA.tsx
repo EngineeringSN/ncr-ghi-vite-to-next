@@ -23,7 +23,7 @@ const SLA = () => {
         <div className="bg-white p-8 rounded-lg shadow-md mb-12">
           <h2 className="text-2xl font-bold text-securenow-blue mb-6">Our Service Commitments</h2>
           <p className="text-gray-600 mb-4">
-            At SecureNow, we believe in transparency and accountability. Our Service Level Agreements 
+            We believe in transparency and accountability. Our Service Level Agreements 
             clearly outline what you can expect from us and when. We hold ourselves to these standards 
             and continuously monitor our performance to ensure we're delivering on our promises.
           </p>
@@ -124,9 +124,9 @@ const SLA = () => {
 
         <div className="text-center">
           <h2 className="text-2xl font-bold text-securenow-blue mb-6">Want to Learn More About Our Service Commitments?</h2>
-          <button className="bg-securenow-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+          <a href="mailto:support@securenow.in" target='_blank' className="bg-securenow-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
             Request Detailed SLA
-          </button>
+          </a>
         </div>
       </div>
     </>

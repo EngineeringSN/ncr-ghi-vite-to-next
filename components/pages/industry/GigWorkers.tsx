@@ -59,7 +59,7 @@ const GigWorkers = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">Unique Insurance Challenges for Gig Workers</h2>
             <p className="text-lg text-gray-700">
-              Traditional group health insurance models weren't built for the gig economy. Here's how SecureNow is addressing these challenges:
+              Traditional group health insurance models weren't built for the gig economy. Here's how we address these challenges:
             </p>
           </div>
           

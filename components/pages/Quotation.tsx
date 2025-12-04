@@ -66,7 +66,7 @@ const Quotation = () => {
       try {
         const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
         const response = await axios.get(
-          `${BASE_URL}/profession/api/v1/getCityList`
+          `https://securenow.in/profession/api/v1/getCityList`
         );
         const cityList = response.data?.data;
         if (Array.isArray(cityList)) {
@@ -111,7 +111,7 @@ const Quotation = () => {
       setIsBtnLoading(true);
       const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
       const response = await axios.post(
-        `${BASE_URL}/profession/api/v1/createOrUpdateProspect`,
+        `https://securenow.in/profession/api/v1/createOrUpdateProspect`,
         {
           company: companyName,
           location: cityName,
@@ -138,7 +138,7 @@ const Quotation = () => {
         setMobileNumber("");
         setEmailAddress("");
         setEmployeeCount("");
-        window.location.href = `${BASE_URL}/group-insurance/group-health-insurance/group-health-quote?prospectid=${encodeURIComponent(
+        window.location.href = `https://securenow.in/group-insurance/group-health-insurance/group-health-quote?prospectid=${encodeURIComponent(
           response.data.data.prospectId
         )}&count=${encodeURIComponent(employeeCount)}`;
       } else {

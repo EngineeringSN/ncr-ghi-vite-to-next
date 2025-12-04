@@ -16,7 +16,7 @@ const ServiceCommitment = () => {
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold text-securenow-blue mb-4">Our Service Commitment</h2>
             <p className="text-gray-600 mb-6">
-              At SecureNow, we believe that providing exceptional service is as important as offering the right insurance products. Our service philosophy is built on transparency, responsiveness, and a deep understanding of our clients' needs.
+              We believe that providing exceptional service is as important as offering the right insurance products. Our service philosophy is built on transparency, responsiveness, and a deep understanding of our clients' needs.
             </p>
             <p className="text-gray-600 mb-6">
               With dedicated service teams for each client, we ensure personalized attention and quick resolution of all insurance-related matters. From policy implementation to claims settlement, our team is with you at every step.

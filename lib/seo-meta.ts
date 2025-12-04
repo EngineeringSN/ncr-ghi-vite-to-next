@@ -1492,4 +1492,400 @@ export const seoMeta: Record<string, Metadata> = {
       },
     },
   },
+  starHealth: {
+    title:
+      "Star Health Group Health Insurance | Coverage & Corporate Plans",
+    description:
+      "Explore Star Health Group Health Insurance plans tailored for corporates and SMEs. Compare coverage options, premium benefits, network hospitals, and policy features designed to protect employees with cashless treatment and fast claims support. Get expert guidance to select the right Star Health group plan for your organization.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Star Health Group Health Insurance | Coverage & Corporate Plans",
+      description:
+        "Explore Star Health Group Health Insurance plans tailored for corporates and SMEs. Compare coverage options, premium benefits, network hospitals, and policy features designed to protect employees with cashless treatment and fast claims support. Get expert guidance to select the right Star Health group plan for your organization.",
+      url: "https://grouphealthinsurance.co"+"/insurers/star-health/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/star-health/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/star-health/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/star-health/hi",
+      },
+    },
+  },
+  hdfcErgo: {
+    title:
+      "HDFC ERGO Group Health Insurance | Corporate Medical Policies",
+    description:
+      "Discover HDFC ERGO Group Health Insurance solutions designed for businesses of all sizes. Compare flexible coverage, cashless hospital networks, policy add-ons, and wellness benefits. Secure your employees with reliable medical protection, faster claim settlements, and comprehensive corporate healthcare options from HDFC ERGO.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "HDFC ERGO Group Health Insurance | Corporate Medical Policies",
+      description:
+        "Discover HDFC ERGO Group Health Insurance solutions designed for businesses of all sizes. Compare flexible coverage, cashless hospital networks, policy add-ons, and wellness benefits. Secure your employees with reliable medical protection, faster claim settlements, and comprehensive corporate healthcare options from HDFC ERGO.",
+      url: "https://grouphealthinsurance.co"+"/insurers/hdfc-ergo/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/hdfc-ergo/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/hdfc-ergo/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/hdfc-ergo/hi",
+      },
+    },
+  },
+  iciciLombard: {
+    title:
+      "ICICI Lombard Group Health Insurance | Employee Medical Coverage",
+    description:
+      "Compare ICICI Lombard Group Health Insurance plans offering strong employee medical protection, extensive network hospitals, custom add-ons, and smooth cashless claim support. Ideal for startups, SMEs, and corporates seeking comprehensive and affordable group health solutions for their teams.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "ICICI Lombard Group Health Insurance | Employee Medical Coverage",
+      description:
+        "Compare ICICI Lombard Group Health Insurance plans offering strong employee medical protection, extensive network hospitals, custom add-ons, and smooth cashless claim support. Ideal for startups, SMEs, and corporates seeking comprehensive and affordable group health solutions for their teams.",
+      url: "https://grouphealthinsurance.co"+"/insurers/icici-lombard/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/icici-lombard/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/icici-lombard/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/icici-lombard/hi",
+      },
+    },
+  },
+  bajajAllianz: {
+    title:
+      "Bajaj Allianz Group Health Insurance | Corporate Health Plans",
+    description:
+      "Explore Bajaj Allianz Group Health Insurance plans designed for organizations looking to improve employee health benefits. Access wide cashless hospital networks, customizable coverage, wellness programs, and timely claim assistance. Get expert help in choosing the right Bajaj Allianz group medical policy for your workforce.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Bajaj Allianz Group Health Insurance | Corporate Health Plans",
+      description:
+        "Explore Bajaj Allianz Group Health Insurance plans designed for organizations looking to improve employee health benefits. Access wide cashless hospital networks, customizable coverage, wellness programs, and timely claim assistance. Get expert help in choosing the right Bajaj Allianz group medical policy for your workforce.",
+      url: "https://grouphealthinsurance.co"+"/insurers/bajaj-allianz/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/bajaj-allianz/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/bajaj-allianz/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/bajaj-allianz/hi",
+      },
+    },
+  },
+  tataAig: {
+    title:
+      "Tata AIG Group Health Insurance | Employee Health Solutions",
+    description:
+      "Learn about Tata AIG Group Health Insurance plans crafted for businesses seeking robust employee healthcare coverage. Review benefits such as cashless treatments, comprehensive hospitalization features, and flexible policy options. Ensure strong medical protection for your employees with Tata AIG group insurance.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Tata AIG Group Health Insurance | Employee Health Solutions",
+      description:
+        "Learn about Tata AIG Group Health Insurance plans crafted for businesses seeking robust employee healthcare coverage. Review benefits such as cashless treatments, comprehensive hospitalization features, and flexible policy options. Ensure strong medical protection for your employees with Tata AIG group insurance.",
+      url: "https://grouphealthinsurance.co"+"/insurers/tata-aig/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/tata-aig/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/tata-aig/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/tata-aig/hi",
+      },
+    },
+  },
+  relianceGeneral: {
+    title:
+      "Reliance General Group Health Insurance | Corporate Medical Plans",
+    description:
+      "Get detailed insights on Reliance General Group Health Insurance plans for companies seeking dependable employee medical protection. Explore policy features, premium options, network hospitals, and claim support. Choose reliable and affordable group healthcare benefits to safeguard your employees’ wellbeing.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Reliance General Group Health Insurance | Corporate Medical Plans",
+      description:
+        "Get detailed insights on Reliance General Group Health Insurance plans for companies seeking dependable employee medical protection. Explore policy features, premium options, network hospitals, and claim support. Choose reliable and affordable group healthcare benefits to safeguard your employees’ wellbeing.",
+      url: "https://grouphealthinsurance.co"+"/insurers/reliance-general/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/reliance-general/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/reliance-general/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/reliance-general/hi",
+      },
+    },
+  },
+  nivaBupa: {
+    title:
+      "Niva Bupa Group Health Insurance | Employee Healthcare Plans",
+    description:
+      "Explore Niva Bupa Group Health Insurance plans offering comprehensive coverage, preventive health benefits, cashless treatments, and strong claim support. Designed for corporates and SMEs, these plans help improve employee wellbeing with flexible and high-value medical protection tailored to organizational needs.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Niva Bupa Group Health Insurance | Employee Healthcare Plans",
+      description:
+        "Explore Niva Bupa Group Health Insurance plans offering comprehensive coverage, preventive health benefits, cashless treatments, and strong claim support. Designed for corporates and SMEs, these plans help improve employee wellbeing with flexible and high-value medical protection tailored to organizational needs.",
+      url: "https://grouphealthinsurance.co"+"/insurers/niva-bupa/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/niva-bupa/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/niva-bupa/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/niva-bupa/hi",
+      },
+    },
+  },
+  newIndia: {
+    title:
+      "New India Assurance Group Health Insurance | Corporate Coverage",
+    description:
+      "Compare New India Assurance Group Health Insurance plans trusted by businesses for reliable and cost-effective employee healthcare coverage. Review hospitalization benefits, cashless networks, and policy flexibility. Ideal for organizations seeking dependable government-backed health protection.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "New India Assurance Group Health Insurance | Corporate Coverage",
+      description:
+        "Compare New India Assurance Group Health Insurance plans trusted by businesses for reliable and cost-effective employee healthcare coverage. Review hospitalization benefits, cashless networks, and policy flexibility. Ideal for organizations seeking dependable government-backed health protection.",
+      url: "https://grouphealthinsurance.co"+"/insurers/new-india-assurance/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/new-india-assurance/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/new-india-assurance/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/new-india-assurance/hi",
+      },
+    },
+  },
+  orientalInsurance: {
+    title:
+      "Oriental Insurance Group Health Insurance | Employee Medical Plans",
+    description:
+      "Discover Oriental Insurance Group Health Insurance policies offering stable and comprehensive medical coverage for employees. Access government-backed reliability, extensive hospital networks, and flexible policy options. Ideal for SMEs and corporates prioritizing long-term employee healthcare benefits.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Oriental Insurance Group Health Insurance | Employee Medical Plans",
+      description:
+        "Discover Oriental Insurance Group Health Insurance policies offering stable and comprehensive medical coverage for employees. Access government-backed reliability, extensive hospital networks, and flexible policy options. Ideal for SMEs and corporates prioritizing long-term employee healthcare benefits.",
+      url: "https://grouphealthinsurance.co"+"/insurers/oriental-insurance/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/oriental-insurance/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/oriental-insurance/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/oriental-insurance/hi",
+      },
+    },
+  },
+  adityaBirla: {
+    title:
+      "Aditya Birla Group Health Insurance | Corporate Health Benefits",
+    description:
+      "Explore Aditya Birla Group Health Insurance plans featuring extensive coverage, wellness initiatives, chronic care management, and cashless hospital access. Designed for modern workplaces, these plans help improve employee health outcomes and provide strong financial protection against medical expenses.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "Aditya Birla Group Health Insurance | Corporate Health Benefits",
+      description:
+        "Explore Aditya Birla Group Health Insurance plans featuring extensive coverage, wellness initiatives, chronic care management, and cashless hospital access. Designed for modern workplaces, these plans help improve employee health outcomes and provide strong financial protection against medical expenses.",
+      url: "https://grouphealthinsurance.co"+"/insurers/aditya-birla/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/aditya-birla/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/aditya-birla/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/aditya-birla/hi",
+      },
+    },
+  },
+  manipalCigna: {
+    title:
+      "ManipalCigna Group Health Insurance | Employee Medical Coverage",
+    description:
+      "Get complete details on ManipalCigna Group Health Insurance plans offering wide coverage, preventive healthcare benefits, global treatment options, and smooth claims. Suitable for corporate teams seeking advanced, flexible, and employee-friendly medical insurance solutions.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "ManipalCigna Group Health Insurance | Employee Medical Coverage",
+      description:
+        "Get complete details on ManipalCigna Group Health Insurance plans offering wide coverage, preventive healthcare benefits, global treatment options, and smooth claims. Suitable for corporate teams seeking advanced, flexible, and employee-friendly medical insurance solutions.",
+      url: "https://grouphealthinsurance.co"+"/insurers/manipal-cigna/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/manipal-cigna/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/manipal-cigna/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/manipal-cigna/hi",
+      },
+    },
+  },
+  sbiGeneral: {
+    title:
+      "SBI General Group Health Insurance | Corporate Medical Policies",
+    description:
+      "Learn about SBI General Group Health Insurance plans trusted by businesses for comprehensive employee medical protection. Explore cashless hospital networks, flexible policy structures, and dependable claim support. Ideal for organizations looking for affordable yet strong corporate health insurance options.",
+    // keywords: [
+    //   "insurance policy documents, health insurance wordings, policy terms conditions, coverage details, insurance PDF downloads"
+    // ],
+    openGraph: {
+      title:
+        "SBI General Group Health Insurance | Corporate Medical Policies",
+      description:
+        "Learn about SBI General Group Health Insurance plans trusted by businesses for comprehensive employee medical protection. Explore cashless hospital networks, flexible policy structures, and dependable claim support. Ideal for organizations looking for affordable yet strong corporate health insurance options.",
+      url: "https://grouphealthinsurance.co"+"/insurers/sbi-general/",
+      siteName: "Group Health Insurance",
+      type: "website",
+      images: [
+        {
+          url: "https://grouphealthinsurance.co"+"/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Group Health Insurance - SecureNow",
+        },
+      ],
+    },
+    alternates: {
+      canonical: "https://grouphealthinsurance.co"+"/insurers/sbi-general/",
+      languages: {
+        "en-IN": "https://grouphealthinsurance.co"+"/insurers/sbi-general/",
+        "hi-IN": "https://grouphealthinsurance.co"+"/insurers/sbi-general/hi",
+      },
+    },
+  },
 };
