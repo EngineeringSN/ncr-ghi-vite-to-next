@@ -71,9 +71,9 @@ const Endorsement = () => {
 
         <div className="text-center">
           <h2 className="text-2xl font-bold text-securenow-blue mb-6">Need to Make Changes to Your Policy?</h2>
-          <button className="bg-securenow-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+          <a href='/quotation' className="bg-securenow-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
             Request an Endorsement
-          </button>
+          </a>
         </div>
       </div>
     </>

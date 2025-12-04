@@ -147,9 +147,9 @@ const ServiceCalls = () => {
 
         <div className="text-center">
           <h2 className="text-2xl font-bold text-securenow-blue mb-6">Ready to Get Support?</h2>
-          <button className="bg-securenow-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+          <a href="tel:9696683999" target='_blank' rel="noopener noreferrer" className="bg-securenow-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
             Contact Service Team
-          </button>
+          </a>
         </div>
       </div>
     </>

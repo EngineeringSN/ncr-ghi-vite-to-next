@@ -355,15 +355,15 @@ const PolicyWordings = () => {
             your business.
           </p>
           <div className="flex justify-center space-x-4">
-            <Button className="bg-securenow-blue hover:bg-blue-700 text-white">
+            <a href="mailto:support@securenow.in" target="_blank" className="bg-securenow-blue pt-3 pb-3 pl-4 pr-4 rounded-sm hover:bg-blue-700 text-white">
               Contact an Expert
-            </Button>
-            <Button
+            </a>
+            {/* <Button
               variant="outline"
               className="border-securenow-blue text-securenow-blue hover:bg-securenow-blue hover:text-white"
             >
               Compare Policies
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

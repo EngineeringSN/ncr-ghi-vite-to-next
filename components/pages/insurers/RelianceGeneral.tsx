@@ -1,6 +1,8 @@
 import React from "react";
 import { Phone, Mail, MapPin, FileText, Users, Building } from "lucide-react";
 import Image from "next/image";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 const RelianceGeneral = () => {
   const keyFeatures = [
     "96.5% Claim Settlement Ratio",
@@ -10,8 +12,11 @@ const RelianceGeneral = () => {
     "Health Checkup Benefits",
     "24x7 Customer Support",
   ];
+  const breadcrumbItems = [{ label: "insurers" },{ label: "reliance-general" }];
   return (
     <>
+    <BreadcrumbSchema/>
+    <BreadcrumbNav items={breadcrumbItems} />
       {/* Header Section */}
       <section className="bg-securenow-blue text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
