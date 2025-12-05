@@ -57,7 +57,7 @@ const NavBar = () => {
     { name: "E-Commerce", path: "/industry/e-commerce" },
     { name: "Food", path: "/industry/food" },
     { name: "Construction", path: "/industry/construction" },
-    { name: "Small Business", path: "/industry/small-business" },
+    // { name: "Small Business", path: "/industry/small-business" },
     { name: "Gig Workers", path: "/industry/gig-workers" }, // Added Gig Workers subpage
   ];
 
