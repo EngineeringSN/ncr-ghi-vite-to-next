@@ -97,7 +97,7 @@ const Industry = () => {
           </CardContent>
         </Card>
 
-        <Card className="shadow hover:shadow-lg transition-shadow">
+        {/* <Card className="shadow hover:shadow-lg transition-shadow">
           <CardContent className="p-6">
             <h3 className="text-xl font-bold text-securenow-blue mb-3">6. Small Business</h3>
             <p className="mb-2"><span className="font-medium">Employee Needs:</span> Limited benefits, cost-consciousness, growth-focused.</p>
@@ -107,7 +107,7 @@ const Industry = () => {
               <Link href="/industry/small-business" className="text-securenow-blue hover:underline font-medium">Learn more →</Link>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </section>
 
