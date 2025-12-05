@@ -105,7 +105,7 @@ const GigWorkers = () => {
 
       {/* Our Insurance Solutions Section */}
       <section className="max-w-4xl mx-auto py-12 px-4">
-        <h2 className="text-3xl font-bold text-securenow-blue mb-8 text-center">SecureNow's Gig Worker Insurance Solutions</h2>
+        <h2 className="text-3xl font-bold text-securenow-blue mb-8 text-center">Our Gig Worker Insurance Solutions</h2>
         
         <div className="space-y-8">
           <div className="md:flex md:gap-6 items-center">
