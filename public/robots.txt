@@ -1,0 +1,27 @@
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://grouphealthinsurance.co/sitemap.xml
+
+# Common crawl optimizations
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Social media crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# AI crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
